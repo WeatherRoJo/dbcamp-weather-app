@@ -11,18 +11,16 @@ import RegisterNewWheatherForecast from './pages/registerNewWeatherForecast';
 
 function App() {
   return (
-    <Router>
-    <div className="App">
-      <Header/>
-      <Routes>
-        <Route path = "/" element = {<Home/>} />
-        <Route path = '/list' element = {<ListWheaterForeCast/>} />
-        <Route path ='register' element = {<RegisterNewWheatherForecast/>} />
-      </Routes>
-      <Footer/>
-    </div>
-    </Router>
-  );
+      <Router>
+        <Header/>
+        <Routes>
+          <Route path = "/" element = {<Home/>} />
+          <Route path = '/list' element = {<ListWheaterForeCast/>} />
+          <Route path ='register' element = {<RegisterNewWheatherForecast/>} />
+        </Routes>
+        <Footer/>
+      </Router>
+   );
 }
 
 export default App;
