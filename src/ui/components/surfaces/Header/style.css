@@ -1,0 +1,28 @@
+ul{
+   list-style: none;
+   display: flex; 
+   background: linear-gradient(180deg, #957DCD , #523D7F );
+   border-radius: 15px;
+   margin-left: 27px;
+   margin-right: 27px;
+
+}
+a{
+    color:white;
+    font-size: 32px;
+    text-decoration: none;
+
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+li { 
+    font-family: 'Poppins';
+    line-height: 12px;
+    margin-top:17px;
+    margin-left: 39px;
+    margin-bottom:17px
+}
+
