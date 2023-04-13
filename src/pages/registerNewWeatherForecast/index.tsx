@@ -1,10 +1,8 @@
-import Footer from "../../ui/components/surfaces/Footer";
-import Header from "../../ui/components/surfaces/Header";
-
+import "./style.css"
 function RegisterNewWheatherForecast(){
     return(
-        <div>
-            <h2>Você está no Registro de Dados Metereologicos</h2>
+        <div className= "registro">
+            <h2>Cadastro Metereológico</h2>
         </div>
     )
 }
