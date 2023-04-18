@@ -1,0 +1,214 @@
+input{
+    color:white;
+    background: linear-gradient(180deg, rgb(149, 125, 205,0.5) 0% , rgb(82, 61, 127, 0.5) 100%);
+    border-radius: 15px;
+    border-style: none;
+    font-size: 20px;
+    height: 50px;
+    font-size:20px;
+}
+h2{
+    font-size: 32px;
+}
+
+.registro{
+    margin-left: 100px;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+.cityAndDate{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: first baseline;
+    
+}
+
+.cityAndDate input{
+    padding-left:10px;
+}
+
+.cityBox{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 12px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20%;
+}
+
+.dateBox{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.cityAndDateInput{
+    display: flex;
+}
+
+.meteriologicalBox{
+    flex-direction:row;
+    flex-wrap: wrap;
+    display:flex;
+    height: 396px;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 67px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    background: linear-gradient(180deg, rgba(149, 125, 205, 0.29) 0%, rgb(82, 61, 127,0.29) 100%);
+}
+
+.wheatherTime{
+    margin-top: 6vh;
+    width:30%;
+    display: flex;
+    flex-direction: row;
+}
+
+.wheaterBox{
+    margin-left: 30px ;
+    margin-right: 25px;
+}
+
+.wheaterInput{
+    display: flex;
+    flex-direction: column;
+    width: 158px
+}
+
+.wheaterInput input{
+    margin-bottom: 31px;
+    padding-left:10px;
+}
+.wheatherInformation{
+    margin-top: 6vh;
+    margin-left: 10%;
+    width:60%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.wheatherInformation input::placeholder{
+    color:#f8f8ff;
+}
+
+.turnBox{
+    margin-right: 33%;
+}
+
+.turnInput{
+    display: flex;
+    flex-direction: column;
+    width: 91px;
+
+}
+
+.turnInput input{
+    margin-bottom: 31px;
+
+}
+
+.turnInput input::placeholder{
+    color:white;
+    text-align: center;
+}
+
+.tempMax{
+    width:50%;
+}
+
+.tempMax h3{
+    width: 15vw ;
+}
+
+.tempMax input{
+    width: 74px;
+    text-align: center;
+}
+
+.tempMin{
+    width:50%;
+}
+.tempMin h3{
+    width:  15vw ;
+}
+.tempMin input{
+    width: 74px;
+    text-align: center;
+    
+}
+
+.meteriologicalBoxBottom {
+display: flex;
+width: 100%;
+}
+.meteriologicalBoxBottom input{
+    width: 74px;
+    text-align: center;
+}
+
+
+.precipitacao{
+    width: 28%;
+}
+.humidade{
+   width: 28%;
+}
+
+.velocidadeVento{
+    width: 44%;
+
+}
+
+.p{
+    color:white;
+    background: linear-gradient(180deg, rgb(149, 125, 205,0.5) 0% , rgb(82, 61, 127, 0.5) 100%);
+    border-radius: 15px;
+    border-style: none;
+    font-size: 20px;
+    height: 50px;
+    font-size:20px;
+}
+
+
+.buttonBox{
+    width: 90%;
+    display: flex;
+    justify-content: end;
+    margin-bottom: 50px;
+}
+
+button{
+    background: linear-gradient(180deg, rgb(149, 125, 205,0.5) 0% , rgb(82, 61, 127, 0.5) 100%);
+    border-radius: 100px;
+    border-style: none;
+    width: 274px;
+    height: 58px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 12px;
+    color: white;
+    margin-left: 34px;
+
+}
+button:hover{
+    background-color: gray;
+    cursor:pointer;
+}
+
+
+.errorMessage {
+    margin-top: 20px;
+    color: red;
+    font-size: 20px;
+  }

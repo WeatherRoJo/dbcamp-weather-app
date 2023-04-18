@@ -1,9 +1,15 @@
-import Footer from "../../ui/components/surfaces/Footer";
-import Header from "../../ui/components/surfaces/Header";
+import { useState } from "react";
+import "./style.css"
 
 export function Home(){
+
+
+    const [primeiroHook,setPrimeiroHook] = useState("Olá meu primeiro hook!")
     return(
-        <div>
+        <div className="home">
+            {primeiroHook}
+            <button onClick={()=>setPrimeiroHook('Você alterou seu primeiro hook')}> Alterar</button>
+            <button onClick={()=>setPrimeiroHook('Voltar para o inicio')}> Valor inicial </button>
             <h2>Você está na Home</h2>
         </div>
     )
