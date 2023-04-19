@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./style.css"
 import searchIcon from "../../ui/assets/genericIcons/pesquisa.svg"
 import locationIcon from "../../ui/assets/genericIcons/Location.svg"
+
 export function Home(){
     return(
     <div>
@@ -9,7 +10,7 @@ export function Home(){
          <h2>Hoje</h2>
          <div>
             <h3>Pesquise a cidade</h3>
-            <div>
+            <div className="searchBar">
                 <div>
                     <img src={searchIcon} />
                     <input/>
