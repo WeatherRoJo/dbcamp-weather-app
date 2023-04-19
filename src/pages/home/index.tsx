@@ -1,17 +1,51 @@
 import { useState } from "react";
 import "./style.css"
-
+import searchIcon from "../../ui/assets/genericIcons/pesquisa.svg"
+import locationIcon from "../../ui/assets/genericIcons/Location.svg"
 export function Home(){
-
-
-    const [primeiroHook,setPrimeiroHook] = useState("Olá meu primeiro hook!")
     return(
-        <div className="home">
-            {primeiroHook}
-            <button onClick={()=>setPrimeiroHook('Você alterou seu primeiro hook')}> Alterar</button>
-            <button onClick={()=>setPrimeiroHook('Voltar para o inicio')}> Valor inicial </button>
-            <h2>Você está na Home</h2>
-        </div>
+    <div>
+       <div className="homeTop">
+         <h2>Hoje</h2>
+         <div>
+            <h3>Pesquise a cidade</h3>
+            <div>
+                <div>
+                    <img src={searchIcon} />
+                    <input/>
+                </div>
+                <img src={locationIcon}/>
+            </div>
+
+         </div>
+       </div>
+       <div className="weatherInfoBox">
+            <div>
+                <img/>
+                <div>
+                </div>
+            </div>
+            <div>
+                <div className="precipitation">
+                    <img/>
+                    <h2></h2>
+                    <p> Precipitação</p>
+                </div>
+                <div className="humidity">
+                    <img/>
+                    <h2></h2>
+                    <p>Humidade</p>
+                </div>
+                <div className="windSpeed">
+                    <img/>
+                    <h2></h2>
+                    <p>Velocidade do Vento</p>
+                </div>
+            </div>
+       </div>
+       <div className="weatherDays">
+       </div>
+    </div>
     )
 }
 
