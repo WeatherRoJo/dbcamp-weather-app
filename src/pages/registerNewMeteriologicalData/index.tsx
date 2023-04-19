@@ -9,14 +9,14 @@ RegisterNewMeteriologicalDataProps
 > = (): JSX.Element => {
 
     const [city, setCity] = useState("");
-    const [date, setDate] = useState("");
-    const [morning_wheater,setMorning_wheater] = useState("");
-    const [night_wheater,setNight_wheater] = useState("");
-    const [max_temperature, setMax_temperature] = useState("");
-    const [min_temperature, setMin_temperature] = useState("");
-    const [humidity, setHumidity] = useState("");
-    const [precipitation, setPrecipitation] =useState("");
-    const [wind_speed, setWind_speed] = useState("");
+    const [weatherDate, setWeatherDate] = useState("");
+    const [morningWeather,setMorningWeather] = useState("");
+    const [nightWeather,setNightWeather] = useState("");
+    const [maxTemperature, setMaxTemperature] = useState(0);
+    const [minTemperature, setMinTemperature] = useState(0);
+    const [humidity, setHumidity] = useState(0);
+    const [precipitation, setPrecipitation] =useState(0);
+    const [windSpeed, setWindSpeed] = useState(0);
 
     const [errorMessage, setErrorMessage] = useState('');
 
@@ -27,16 +27,16 @@ RegisterNewMeteriologicalDataProps
 
         const Body = {
               city,
-              date,
-              morning_wheater,
-              night_wheater,
-              max_temperature,
-              min_temperature,
+              weatherDate,
+              morningWeather,
+              nightWeather,
+              maxTemperature,
+              minTemperature,
               humidity ,
               precipitation,
-              wind_speed
+              windSpeed
             } 
-
+            
         try {
             await  postMeteriologicalData(Body)
         } catch (error: any) {
@@ -64,8 +64,8 @@ RegisterNewMeteriologicalDataProps
                             required 
                             type='date' 
                             className="dateInput"
-                            value={date}  
-                            onChange={(event) => setDate(event.target.value)}
+                            value={weatherDate}  
+                            onChange={(event) => setWeatherDate(event.target.value)}
                         ></input>
                     </div>  
                 </div>
@@ -73,15 +73,23 @@ RegisterNewMeteriologicalDataProps
                         <div className="wheatherTime">
                             <div className="wheaterBox">
                                 <h3>Tempo</h3>
-                                <div className="wheaterInput">
-                                    <input
-                                        onChange={(event) => setMorning_wheater(event.target.value)}
-                                        required
-                                     />
-                                    <input
-                                        required
-                                        onChange={(event) => setNight_wheater(event.target.value)}
-                                    />
+                                <div className="wheaterSelect">
+                                    <select onChange={(event) => setMorningWeather(event.target.value)}>
+                                        <option value=""> Selecione </option>
+                                        <option value="SUN"> Ensolarado </option>
+                                        <option value="SUN_WITH_CLOUDS">Sol com nuvens </option>
+                                        <option value="CLOUDY">Nublado</option>
+                                        <option value="RAIN" > Chuvoso </option>
+                                        <option value="STORM" > Tempestade </option>
+                                    </select>
+                                    <select onChange={(event) => setNightWeather(event.target.value)}>
+                                        <option value="" > Selecione </option>
+                                        <option value="SUN"> Ensolarado </option>
+                                        <option value="SUN_WITH_CLOUDS"> Sol com nuvens </option>
+                                        <option value="CLOUDY"> Nublado</option>
+                                        <option value="RAIN" > Chuvoso </option>
+                                        <option value="STORM" > Tempestade </option>
+                                    </select>
                                 </div>
                             </div>
                             <div className="turnBox">
@@ -99,7 +107,7 @@ RegisterNewMeteriologicalDataProps
                                     placeholder="ºC" 
                                     type="number"
                                     required 
-                                    onChange={(event) => setMax_temperature(event.target.value)}
+                                    onChange={(event) => setMaxTemperature(parseInt(event.target.value))}
                                 />
                             </div>
                             <div className="tempMin">
@@ -108,7 +116,7 @@ RegisterNewMeteriologicalDataProps
                                     placeholder="ºC" 
                                     type="number"
                                     required
-                                    onChange={(event) => setMin_temperature(event.target.value)}
+                                    onChange={(event) => setMinTemperature(parseInt(event.target.value))}
                                 />
                             </div>
                             <div className="meteriologicalBoxBottom">
@@ -118,7 +126,7 @@ RegisterNewMeteriologicalDataProps
                                         placeholder="%" 
                                         type="number"
                                         required
-                                        onChange={(event) => setPrecipitation(event.target.value)}
+                                        onChange={(event) => setPrecipitation(parseInt(event.target.value))}
                                     />
                                  </div>
                                 <div className="humidade">
@@ -127,7 +135,7 @@ RegisterNewMeteriologicalDataProps
                                         placeholder="%" 
                                         type="number"
                                         required
-                                        onChange={(event) => setHumidity(event.target.value)}
+                                        onChange={(event) => setHumidity(parseInt(event.target.value))}
                                     />
                                 </div>
                                 <div className="velocidadeVento">
@@ -136,7 +144,7 @@ RegisterNewMeteriologicalDataProps
                                         placeholder="km/h" 
                                         type="number"
                                         required
-                                        onChange={(event) => setWind_speed(event.target.value)}
+                                        onChange={(event) => setWindSpeed(parseInt(event.target.value))}
                                     />
                                 </div>
                             </div>
