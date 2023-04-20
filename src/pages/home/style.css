@@ -1,7 +1,7 @@
 .homeTop{
     display: flex;
     flex-flow: row wrap;
-    width: 50%;
+    width: 80%;
     justify-content: space-between;
     margin-left: 100px;
 }
@@ -9,4 +9,21 @@
 .searchBar{
     display: flex;
     align-items: center;
+}
+.searchInput{
+    background: linear-gradient(180deg, rgb(149, 125, 205,0.5) 0% , rgb(82, 61, 127, 0.5) 100%);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+}
+textarea:focus, input:focus, select:focus {
+    outline: 0;
+}
+.searchInput input{
+    box-sizing: border-box;
+    background: none;
+}
+.searchInput img{
+    width: 30px;
+    margin-right: 2px;
 }

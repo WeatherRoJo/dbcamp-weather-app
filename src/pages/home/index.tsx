@@ -11,7 +11,7 @@ export function Home(){
          <div>
             <h3>Pesquise a cidade</h3>
             <div className="searchBar">
-                <div>
+                <div className="searchInput">
                     <img src={searchIcon} />
                     <input/>
                 </div>
