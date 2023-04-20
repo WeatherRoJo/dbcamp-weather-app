@@ -1,0 +1,36 @@
+ul{
+   list-style: none;
+   display: flex; 
+   background: linear-gradient(180deg, rgb(149, 125, 205,0.5) 0% , rgb(82, 61, 127, 0.5) 100%);
+   border-radius: 15px;
+   margin-left: 27px;
+   margin-right: 27px;
+   height: 72px;
+   align-items: center;
+}
+@media screen and (max-width: 350px) {
+    a{
+        visibility: hidden;
+    }
+  }
+
+a{
+    color:white;
+    font-size: 32px;
+    text-decoration: none;
+    opacity: 1.0;
+
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+li { 
+    font-family: 'Poppins';
+    line-height: 12px;
+    margin-top:17px;
+    margin-left: 39px;
+    margin-bottom:17px;
+}
+
