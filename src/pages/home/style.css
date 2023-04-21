@@ -5,16 +5,27 @@
     justify-content: space-between;
     margin-left: 100px;
 }
+.homeTop h2{
+    margin-top: 50px;
+}
 
 .searchBar{
     display: flex;
     align-items: center;
 }
+.searchBar img{
+    margin-left: 30px;
+    margin-bottom: 15px;
+    width:50px;
+    height:50px;
+}
 .searchInput{
+    width: 500px;
     background: linear-gradient(180deg, rgb(149, 125, 205,0.5) 0% , rgb(82, 61, 127, 0.5) 100%);
     border-radius: 15px;
     display: flex;
     align-items: center;
+    margin-bottom: 15px;
 }
 textarea:focus, input:focus, select:focus {
     outline: 0;
@@ -26,4 +37,67 @@ textarea:focus, input:focus, select:focus {
 .searchInput img{
     width: 30px;
     margin-right: 2px;
+    margin-bottom: 0px;
+}
+
+
+.weatherInfoBox{
+    margin-left: 100px;
+    width: 80%;
+    height: relative;
+    border-radius: 15px;
+    background: linear-gradient(180deg, rgb(149, 125, 205,0.5) 0% , rgb(82, 61, 127, 0.5) 100%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    flex-wrap: wrap;
+}
+.todayWeather {
+    display: flex;
+    margin-left: 20px;
+}
+
+.todayWeather h1{
+    font-style: normal;
+    font-size: 50px;
+}
+.todayWeather img {
+    height: 150px;
+    width: 200px;
+}
+.MinAndMaxTemperature{
+    display: flex;
+
+}
+.MinAndMaxTemperature h2{
+    margin-top: 70px;
+    font-size: 25px;
+    margin-left: 10px;
+}
+.MinAndMaxTemperature h3{
+    margin-top: 50px;
+    font-size: 40px
+}
+
+.wheatherStatistics{
+    align-items: center;
+    display: flex;
+}
+.wheatherStatistics img{
+    width: 83px;
+    height: 83px;
+}
+.precipitation{
+    margin-top: 50px;
+    margin-right: 94px;
+}
+
+.humidity{
+    margin-top: 50px;
+    margin-right: 94px;
+}
+.windSpeed{
+    margin-top: 50px;
+    margin-right: 94px;
 }
