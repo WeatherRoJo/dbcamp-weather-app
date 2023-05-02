@@ -1,12 +1,14 @@
 import api, { handleAxiosError } from '../api';
 
-export const getAllMetereologicalData= async(cidade:string)=>{
+export const getAllMetereologicalData= async()=>{
     try{
-        return api.get(`meteorologicalData?city=${cidade}`);
+       const response = await api.get("/meteorologicalData");
+       const data = response.data;
+       return data;
     }
     catch{
         throw new Error("Serviço Indisponível");
     }
 }
 
-export default getAllMetereologicalData;
+export default getAllMetereologicalData

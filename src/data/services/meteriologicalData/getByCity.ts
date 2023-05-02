@@ -1,11 +1,11 @@
 import api, { handleAxiosError } from '../api';
 
-export const getByCity =  async()=>{
+export const getByCity =  async(cidade:string)=>{
     try{
-        return api.get("/meteorologicalData");
+        return await api.get(`meteorologicalData/${cidade}`);
     }
     catch{
-        throw new Error("Serviço Indisponível");
+        throw new Error("Cidade não encontrada");
     }
 }
 
