@@ -1,4 +1,5 @@
 import "./style.css"
+import Alert from "../../ui/components/data-display/Alert/Alert";
 import { useState } from "react";
 import postMeteriologicalData from "../../data/services/meteriologicalData/postMeteriologicalData";
 
@@ -17,8 +18,9 @@ RegisterNewMeteriologicalDataProps
     const [humidity, setHumidity] = useState(0);
     const [precipitation, setPrecipitation] =useState(0);
     const [windSpeed, setWindSpeed] = useState(0);
-
+    const [success, setSuccess] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
+    
 
     
 
@@ -38,13 +40,15 @@ RegisterNewMeteriologicalDataProps
             } 
             
         try {
-            await  postMeteriologicalData(Body)
+            await  postMeteriologicalData(Body);
+            setSuccess(true);
         } catch (error: any) {
             setErrorMessage("Desculpe, ocorreu um erro ao realizar o cadastro");
         }
       }
 
     return(
+        <> {success && <Alert />}
         <div className= "registro">
             <h2>Cadastro Metereológico</h2>
             <form  onSubmit={handleSubmit} >
@@ -160,6 +164,7 @@ RegisterNewMeteriologicalDataProps
                 <p className="errorMessage">{errorMessage}</p>
               )}
         </div>
+        </>
     )
 }
 export default RegisterNewMeteriologicalData;
